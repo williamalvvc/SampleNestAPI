@@ -31,8 +31,8 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }} # optional
       
       - run: |
-          docker build . -t yourACRname.azurecr.io/appdb:${{ github.sha }}
-          docker push yourACRname.azurecr.io/appdb:${{ github.sha }}
+          docker build . -t williamalvvv.azurecr.io/appdb:${{ github.sha }}
+          docker push williamalvvv.azurecr.io/appdb:${{ github.sha }}
 
 # name: ci
 
