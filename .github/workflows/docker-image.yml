@@ -30,9 +30,13 @@ jobs:
           # Password or personal access token used to log against the Docker registry
           password: ${{ secrets.ACR_PASSWORD }} # optional
       
-      - run: |
-          docker build . -t williamalvvv.azurecr.io/appdb:${{ github.sha }}
-          docker push williamalvvv.azurecr.io/appdb:${{ github.sha }}
+      -
+        name: 'Build and Push Docker Image'
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: user/app:latest
 
 # name: ci
 
