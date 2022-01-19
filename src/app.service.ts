@@ -53,4 +53,8 @@ export class AppService {
 
     return salute;
   }
+  getSalute(): any {
+    const output = 'Hello World!';
+    return output;
+  }
 }
